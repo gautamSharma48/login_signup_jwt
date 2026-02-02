@@ -5,15 +5,9 @@
 - **JWT middleware** – Verifies `Authorization: Bearer <token>`, allows only authenticated users
 - **Protected Get Data API** – Returns current user data (no password or sensitive fields)
 
-## Prerequisites
-- Node.js 18+
-- MongoDB (local or Atlas)
-- Git (for cloning/pushing)
-
 ## Setup
 1. Install dependencies
 2. Environment variables
-   - Copy `.env.example` to `.env`
    - Set `MONGODB_URI` and `JWT_SECRET` (required)
    Edit `.env`:
    - `MONGODB_URI` – MongoDB connection string (e.g. `mongodb://localhost:27017/nodejs-auth-api` or Atlas URI)
@@ -108,4 +102,5 @@ Authorization: Bearer <your-jwt-token>
 Returns API status (no auth).
 
 { "success": true, "message": "API is running" }
+
 
