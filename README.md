@@ -11,18 +11,8 @@
 - Git (for cloning/pushing)
 
 ## Setup
-1. **Clone the repository**
-   ```bash
-   git clone <your-repo-url>
-   cd nodejs-auth-api
-   ```
-
-2. **Install dependencies**
-   ```bash
-   npm install
-   ```
-
-3. **Environment variables**
+1. Install dependencies
+2. Environment variables
    - Copy `.env.example` to `.env`
    - Set `MONGODB_URI` and `JWT_SECRET` (required)
    Edit `.env`:
@@ -30,7 +20,7 @@
    - `JWT_SECRET` – Long random string for signing JWTs (e.g. use `openssl rand -hex 32`)
    - Optional: `PORT`, `NODE_ENV`, `JWT_EXPIRES_IN`
 
-4. **Run the server**
+3.**Run the server**
    npm start
    npm run dev
    Server runs at `http://localhost:5000` (or your `PORT`).
@@ -116,4 +106,5 @@ Authorization: Bearer <your-jwt-token>
 ### 4. Health check
 **GET** `/health`
 Returns API status (no auth).
+
 { "success": true, "message": "API is running" }
