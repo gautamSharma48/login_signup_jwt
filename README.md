@@ -43,7 +43,7 @@ Register a new user. Validates input, hashes password, stores in MongoDB. Return
   "success": true,
   "message": "User registered successfully",
   "data": {
-    "user": { "id": "...", "name": "John Doe", "email": "john@example.com" },
+    "user": { "id": "...", "name": "name", "email": "email" },
     "token": "eyJhbGciOiJIUzI1NiIs..."
   }
 }
@@ -55,8 +55,8 @@ Verify email and password; returns user + JWT.
 
 **Request body (JSON):**
 {
-  "email": "john@example.com",
-  "password": "secret123"
+  "email": "email@example.com",
+  "password": "password"
 }
 
 
@@ -65,7 +65,7 @@ Verify email and password; returns user + JWT.
   "success": true,
   "message": "Login successful",
   "data": {
-    "user": { "id": "...", "name": "John Doe", "email": "john@example.com" },
+    "user": { "id": "...", "name": "name", "email": "email@example.com" },
     "token": "eyJhbGciOiJIUzI1NiIs..."
   }
 }
@@ -87,8 +87,8 @@ Authorization: Bearer <your-jwt-token>
   "data": {
     "user": {
       "id": "...",
-      "name": "John Doe",
-      "email": "john@example.com",
+      "name": "Name",
+      "email": "email@example.com",
       "createdAt": "...",
       "updatedAt": "..."
     }
@@ -102,5 +102,6 @@ Authorization: Bearer <your-jwt-token>
 Returns API status (no auth).
 
 { "success": true, "message": "API is running" }
+
 
 
