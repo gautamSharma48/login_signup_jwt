@@ -35,9 +35,9 @@ Register a new user. Validates input, hashes password, stores in MongoDB. Return
 
 **Request body (JSON):**
 {
-  "name": "John Doe",
-  "email": "john@example.com",
-  "password": "secret123"
+  "name": "Name",
+  "email": "Name@example.com",
+  "password": "password"
 }
 
 **Validation rules:**
@@ -108,3 +108,4 @@ Authorization: Bearer <your-jwt-token>
 Returns API status (no auth).
 
 { "success": true, "message": "API is running" }
+
